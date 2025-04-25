@@ -1,35 +1,41 @@
 @import './base.css';
-
+/* Replace or modify these styles in your main.css */
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   font-weight: normal;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
+/* Replace the existing link styling with this */
 a,
 .green {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
+  color: #8B4513; /* This is a brown color, you can adjust the shade */
   transition: 0.4s;
   padding: 3px;
 }
 
+/* If you want to keep the hover effect but make it brown-themed */
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    background-color: rgba(139, 69, 19, 0.2); /* Lighter brown background */
   }
 }
 
+/* For desktop, remove or update the grid layout */
 @media (min-width: 1024px) {
   body {
-    display: flex;
-    place-items: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
   }
 
   #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    display: block; /* Remove the grid layout */
+    width: 100%;
+    padding: 0;
   }
 }
